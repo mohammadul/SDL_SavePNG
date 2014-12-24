@@ -1,7 +1,7 @@
 CC=gcc
 
-CFLAGS=-g `sdl-config --cflags`
-LDFLAGS=`sdl-config --libs` -lpng 
+CFLAGS=-g `sdl2-config --cflags`
+LDFLAGS=`sdl2-config --libs` -lpng 
 
 SOURCES=savepng.c main.c
 EXECUTABLE=savepng
