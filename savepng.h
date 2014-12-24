@@ -6,7 +6,12 @@
  * This code is free software, available under zlib/libpng license.
  * http://www.libpng.org/pub/png/src/libpng-LICENSE.txt
  */
-#include <SDL_video.h>
+#include <SDL2/SDL_video.h>
+#include <malloc.h>
+
+#ifdef __cplusplus
+extern "C"{
+#endif
 /*
  * Save an SDL_Surface as a PNG file.
  *
@@ -33,4 +38,7 @@ extern int SDL_SavePNG_RW(SDL_Surface *surface, SDL_RWops *rw, int freedst);
  */
 extern SDL_Surface *SDL_PNGFormatAlpha(SDL_Surface *src);
 
+#ifdef __cplusplus
+}
+#endif
 #endif
